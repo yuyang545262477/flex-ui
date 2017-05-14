@@ -1,0 +1,25 @@
+//@import "single";
+//@import "multiple";
+@import "test2";
+
+.flexStyle {
+  display: flex;
+}
+
+.flexSection {
+  @extend .flexStyle;
+}
+
+.flexBox {
+  @extend .flexStyle;
+  @extend .middleCenter;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+//垂直，或者水平方向函数
+@mixin flexDirection($rowOrCol:row) {
+  @if ($rowOrCol== column) {
+    flex-direction: column;
+  } @else if ($rowOrCol== column-reverse) {
+    flex-direction: column-reverse;
+  } @else if ($rowOrCol == row-reverse) {
+    flex-direction: row-reverse;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin verticalDirection($vertical:top) {
+  @if ($vertical==top) {
+
+  }
+}

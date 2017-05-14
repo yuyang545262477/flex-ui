@@ -1,0 +1,20 @@
+@function hStyle($hIndex) {
+  $h-list: flex-start, center, flex-end, space-around, space-between;
+  @return nth($h-list, $hIndex);
+}
+
+@function vStyle($vIndex) {
+  $v-list: flex-start, center, flex-end;
+  @return nth($v-list, $vIndex);
+}
+
+@function col-hStyle($vIndex) {
+  $v-list: flex-start, center, flex-end;
+  @return nth($v-list, $vIndex);
+}
+
+@function col-vStyle($hIndex) {
+  $h-list: flex-start, center, flex-end, space-around, space-between;
+  @return nth($h-list, $hIndex);
+}
+

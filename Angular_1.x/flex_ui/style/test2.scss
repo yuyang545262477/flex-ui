@@ -1,0 +1,43 @@
+@import "function";
+
+$flex-list: 'col', 'row';
+$vertical-list: 'top', 'middle', 'bottom';
+$horizontal-list: 'Left', 'Center', 'Right', 'Around', 'Between';
+$col-vertical-list: 'top', 'middle', 'bottom', 'around', 'between';
+$col-horizontal-list: 'Left', 'Center', 'Right';
+//items vertical direction
+
+@each $col-vertical-item in $col-vertical-list {
+  @each $col-horizontal-item in $col-horizontal-list {
+    $col-vertical-index: index($col-vertical-list, $col-vertical-item);
+    $col-horizontal-index: index($col-horizontal-list, $col-horizontal-item);
+    .flexBox,
+    .flexSection {
+      &.col-#{$col-vertical-item}#{$col-horizontal-item} {
+        flex-direction: column;
+        justify-content: col-vStyle($col-vertical-index);
+        align-items: col-hStyle($col-horizontal-index);
+      }
+    }
+  }
+}
+
+// items horizontal direction
+@each $vertical-item in $vertical-list {
+  @each $horizontal-item in $horizontal-list {
+    $vertical-index: index($vertical-list, $vertical-item);
+    $horizontal-index: index($horizontal-list, $horizontal-item);
+
+    .flexBox,
+    .flexSection {
+      &.#{$vertical-item}#{$horizontal-item} {
+        justify-content: hStyle($horizontal-index);
+        align-items: vStyle($vertical-index);
+      }
+    }
+  }
+}
+
+
+
+
